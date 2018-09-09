@@ -1,0 +1,15 @@
+<div class='main'>
+	<img [src]="cakeToShow.img" alt="a cake">
+	<div>
+		<h4>Cake by: {{ cakeToShow.baker }}</h4>
+		<h5>Average Rating: {{ average(cakeToShow) }}</h5>
+		<h6>Reviews:</h6>
+		<ul>
+			<li *ngFor="let r of cakeToShow.rating">
+				Rating: {{r['rating']}}, 
+				Comment: {{r['comment']}}
+			</li>
+		</ul>
+	</div>
+</div>
+		
